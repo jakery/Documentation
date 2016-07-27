@@ -4,6 +4,7 @@ Adding additional field definitions to Ignition Framework
 
 In this example we will be creating a third DateTime field.
 In Sitecore:
+
 #. Navigate to /sitecore/templates/Ignition/Fields/Content
 #. Right-click the Content folder and select Insert → Template.
 
@@ -18,13 +19,13 @@ In Sitecore:
 
 
 In the Ignition solution in Visual Studio:
+
 #. Navigate to Ignition/Data/Ignition.Data/Fields
 #. Create a new interface called IDateTime3.
 #. Create using references for:
 
 	#. System;
 	#. Glass.Mapper.Sc.Configuration.Attributes;
-	#. Glass.Mapper.Sc.Fields;
 	#. Ignition.Core.Models.BaseModels;
 
 #. Above the interface declaration, add the “SitecoreType” attribute. Specify the “TemplateId” property to match the Item Id of the newly created DateTime3 template in Sitecore.
