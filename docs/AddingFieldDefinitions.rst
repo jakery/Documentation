@@ -8,18 +8,21 @@ In this example we will be creating a third DateTime field.
 Step 1: Create a template for the field in Sitecore
 ===================================================
 
-#. Create a new template in ``/sitecore/templates/Ignition/Fields/Content``
+#. Create a new template in ``/sitecore/templates/Ignition/Fields/Content``.
 #. Name the template ``DateTime3``.
-#. For the base template, select ``Templates/Ignition/ItemBase``
+#. For the base template, select ``Templates/Ignition/ItemBase``.
 #. Assign your new template an icon. (For this example we will use ``Business/32x32/calendar.png``)
 #. On the template’s builder tab, create a section called ``Content`` and create the field ``DateTime3`` of type ``Datetime``.
 
+.. image:: builder.png
 
 ==========================================================
 Step 2: Create an interface for the field in Visual Studio
 ==========================================================
 
-#. Navigate to ``Ignition/Data/Ignition.Data/Fields``
+These steps outline the creation of the IDateTime3 interface. An example of what this looks will look like is provided at the end of this section.
+
+#. Navigate to ``Ignition/Data/Ignition.Data/Fields``.
 #. Create a new interface called ``IDateTime3``.
 #. Create using references for:
 
@@ -56,4 +59,4 @@ The completed interface for the new field should look like the example below.
 Finishing up
 ============
 
-Build the Ignition.Data project and re-publish. The newly-created field should now be usable on all ignition-based pages.
+Build the Ignition.Data project and re-publish. The newly-created field should now be usable on all Ignition-based pages.
