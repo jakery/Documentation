@@ -1,6 +1,14 @@
+********************************************
 Accessing the component's Datasource setting
+********************************************
 
-In your agent, inheriting AbstractViewAgent provides access to the (IModelBase)Datasource property. By default, the Datasource propertry contains the current component's display name, URI, child items, and other commonly-used metadata. To access the datasource's Ignition fields, you must cast the datasource to the model type of your component:
+In your agent, inheriting AbstractViewAgent provides access to the (IModelBase)Datasource property. By default, the Datasource propertry contains the current component's display name, URI, child items, and other commonly-used metadata. The full list of default Datasource properties is viewable in the code files:
+
+https://github.com/sitecoreignition/SitecoreIgnition/blob/master/Ignition.Core/Models/BaseModels/IModelBase.cs
+
+https://github.com/sitecoreignition/SitecoreIgnition/blob/master/Ignition.Core/Models/BaseModels/IModelBaseWithMetadata.cs
+
+To access the datasource's Ignition fields, you must cast the datasource to the model type of your component:
 
 
 ::
@@ -20,8 +28,9 @@ In your agent, inheriting AbstractViewAgent provides access to the (IModelBase)D
 
         public override void PopulateModel() 
         {
+            // Only properties defined in IModelBase are accessible in the Datasource variable.
             var ds = Datasource as IMyComponent;
-            //ds.Heading, ds.Subtitle, and ds.Image are now accessible.
+            // All Datasource properties plus ds.Heading, ds.Subtitle, and ds.Image are now accessible.
         }
     }
 
